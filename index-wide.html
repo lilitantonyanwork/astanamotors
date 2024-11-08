@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20241027205056">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
   </head>
   <body>
@@ -44,7 +44,7 @@
                 </div>
               </div>
               <div class="header__profile">
-                <div class="profile-menu">
+                <div class="profile-menu" id="menu">
                   <div class="profile-menu__item">
                     <div class="profile-menu__image"><picture><source srcset="img/Avatar.webp, img/Avatar@2x.webp 2x" type="image/webp"><img src="img/Avatar.png" srcset="img/Avatar@2x.png 2x" alt=""></picture></div>
                     <svg class="profile-menu__icon">
@@ -52,6 +52,34 @@
                     </svg>
                   </div>
                 </div>
+                  <div class="profile__dropdown" id="dropdown">
+                      <div class="profile__dropdown-user">
+                          <picture><source srcset="img/Avatar.webp, img/Avatar@2x.webp 2x" type="image/webp">
+                              <img src="img/Avatar.png" srcset="img/Avatar@2x.png 2x" alt=""></picture>
+                          <h4 class="profile__username">Тихомиров П.А</h4>
+                      </div>
+                      <div class="profile__dropdown--links">
+                          <a href="" class="profile__dropdown--link">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M11.999 16.5V16.5396M9.75 9.22999C9.75 7.96388 10.7574 6.9375 12 6.9375C13.2426 6.9375 14.25 7.96388 14.25 9.22999C14.25 10.4961 13.2426 11.5225 12 11.5225C12 11.5225 11.999 12.2067 11.999 13.0508M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              Справка
+                          </a>
+                          <a href="" class="profile__dropdown--link">
+                              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" id="logout">
+                                  <path d="M14.6471 7.8001V5.7001C14.6471 5.14314 14.424 4.609 14.0268 4.21517C13.6297 3.82135 13.091 3.6001 12.5294 3.6001H5.11765C4.55601 3.6001 4.01738 3.82135 3.62024 4.21517C3.22311 4.609 3 5.14314 3 5.7001V18.3001C3 18.8571 3.22311 19.3912 3.62024 19.785C4.01738 20.1788 4.55601 20.4001 5.11765 20.4001H12.5294C13.091 20.4001 13.6297 20.1788 14.0268 19.785C14.424 19.3912 14.6471 18.8571 14.6471 18.3001V16.2001M8.29412 12.0001H21M21 12.0001L17.8235 8.8501M21 12.0001L17.8235 15.1501" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              Выйти
+                          </a>
+                      </div>
+                      <div class="profile__dropdown--mode">
+                          Темный режим
+                          <label for="mode" class="switch">
+                              <input type="checkbox" name="mode" id="mode">
+                              <span class="slider round"></span>
+                          </label>
+                      </div>
+                  </div>
               </div>
             </div>
           </header>
@@ -197,102 +225,429 @@
       </main>
     </div>
     <div class="hystmodal" id="myModal" aria-hidden="true">
-      <div class="hystmodal__wrap">
-        <div class="hystmodal__window" role="dialog" aria-modal="true">
-          <div class="hystmodal__block">
-            <button class="hystmodal__close" data-hystclose>
-              <svg class="hystmodal__iconClose">
-                <use xlink:href="img/icons/icons.svg#close"></use>
-              </svg>
-            </button>
-            <div class="hystmodal__item">
-              <div class="hystmodal__title">Строительство дилерского центра в г. Алматы</div>
-              <div class="hystmodal__label">В разработке</div>
-            </div>
-            <div class="hystmodal__item">
-              <ul class="hystmodal-nav tabs-nav">
-                <li class="hystmodal-nav__item tab tab--active" data-id="tab-1"><span class="hystmodal-nav__label">Проектирование</span></li>
-                <li class="hystmodal-nav__item tab" data-id="tab-2"><span class="hystmodal-nav__label">Строительство</span></li>
-                <li class="hystmodal-nav__item tab" data-id="tab-3"><span class="hystmodal-nav__label">Ввод в эксплуатацию</span></li>
-                <li class="hystmodal-nav__item tab" data-id="tab-4"><span class="hystmodal-nav__label">Завершение проекта</span></li>
-              </ul>
-            </div>
-            <div class="hystmodal__item"> 
-              <div class="tabs-content">
-                <div class="content content--active" id="tab-1">
-                  <div class="hystmodal-nav-content">
-                    <div class="hystmodal-nav-content__wrapper">
-                      <ul class="hystmodal-nav-content__inner">
-                        <li class="hystmodal-nav-content__item tab-inner tab-inner--active" data-id="content-1"><span class="hystmodal-nav-content__label">Общие</span></li>
-                        <li class="hystmodal-nav-content__item tab-inner" data-id="content-2"><span class="hystmodal-nav-content__label">Задачи</span></li>
-                        <li class="hystmodal-nav-content__item tab-inner" data-id="content-3"><span class="hystmodal-nav-content__label">Документы</span></li>
-                        <li class="hystmodal-nav-content__item tab-inner" data-id="content-4"><span class="hystmodal-nav-content__label">Порядок работы</span></li>
-                        <li class="hystmodal-nav-content__item tab-inner" data-id="content-5"><span class="hystmodal-nav-content__label">Согласование</span></li>
-                      </ul>
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <div class="hystmodal__block">
+                    <button class="hystmodal__close" data-hystclose>
+                        <svg class="hystmodal__iconClose">
+                            <use xlink:href="img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                    <div class="hystmodal__item">
+                        <div class="hystmodal__title">Строительство дилерского центра в г. Алматы</div>
+                        <div class="hystmodal__label">В разработке</div>
                     </div>
-                    <div class="hystmodal-nav-content__block">
-                      <div class="tabs-content">
-                        <div class="content-inner content-inner--active" id="content-1">
-                          <div class="content-inner__wrap">
-                            <div class="content-inner__image"><picture><source srcset="img/imageCardModal.webp, img/imageCardModal@2x.webp 2x" type="image/webp"><img src="img/imageCardModal.png" srcset="img/imageCardModal@2x.png 2x" alt=""></picture></div>
-                            <div class="content-inner__wrapper">
-                              <p class="content-inner__text">Строительство современного дилерского центра в городе Алматы началось в начале 2023 года и продолжалось более двух лет. Центр будет предоставлять широкий спектр услуг, включая продажу автомобилей, техническое  обслуживание, запасные части и многое другое.</p>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Название проекта:</div>
-                                <div class="content-inner__info-right">Дилерский центр</div>
-                              </div>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Страна:</div>
-                                <div class="content-inner__info-right">Казахстан</div>
-                              </div>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Город:</div>
-                                <div class="content-inner__info-right">Алматы</div>
-                              </div>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Срок проекта</div>
-                                <div class="content-inner__info-right">20 декабря 2024</div>
-                              </div>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Руководитель проекта</div>
-                                <div class="content-inner__info-right">Суровикин А.С</div>
-                              </div>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Назначенный директор</div>
-                                <div class="content-inner__info-right">Лужницкий Д.В</div>
-                              </div>
-                              <div class="content-inner__info">
-                                <div class="content-inner__info-left">Бюджет</div>
-                                <div class="content-inner__info-right">25 051 730 тен.</div>
-                              </div>
+                    <div class="hystmodal__item">
+                        <ul class="hystmodal-nav tabs-nav">
+                            <li class="hystmodal-nav__item tab tab--active" data-id="tab-1"><span class="hystmodal-nav__label">Проектирование</span></li>
+                            <li class="hystmodal-nav__item tab" data-id="tab-2"><span class="hystmodal-nav__label">Строительство</span></li>
+                            <li class="hystmodal-nav__item tab" data-id="tab-3"><span class="hystmodal-nav__label">Ввод в эксплуатацию</span></li>
+                            <li class="hystmodal-nav__item tab" data-id="tab-4"><span class="hystmodal-nav__label">Завершение проекта</span></li>
+                        </ul>
+                    </div>
+                    <div class="hystmodal__item">
+                        <div class="tabs-content">
+                            <div class="content content--active" id="tab-1">
+                                <div class="hystmodal-nav-content">
+                                    <div class="hystmodal-nav-content__wrapper">
+                                        <ul class="hystmodal-nav-content__inner">
+                                            <li class="hystmodal-nav-content__item tab-inner tab-inner--active" data-id="content-1"><span class="hystmodal-nav-content__label">Общие</span></li>
+                                            <li class="hystmodal-nav-content__item tab-inner" data-id="content-2"><span class="hystmodal-nav-content__label">Задачи</span></li>
+                                            <li class="hystmodal-nav-content__item tab-inner" data-id="content-3"><span class="hystmodal-nav-content__label">Документы</span></li>
+                                            <li class="hystmodal-nav-content__item tab-inner" data-id="content-4"><span class="hystmodal-nav-content__label">Порядок работы</span></li>
+                                            <li class="hystmodal-nav-content__item tab-inner" data-id="content-5"><span class="hystmodal-nav-content__label">Согласование</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="hystmodal-nav-content__block">
+                                        <div class="tabs-content">
+                                            <div class="content-inner content-inner--active" id="content-1">
+                                                <div class="content-inner__wrap">
+                                                    <div class="content-inner__image"><picture><source srcset="img/imageCardModal.webp, img/imageCardModal@2x.webp 2x" type="image/webp"><img src="img/imageCardModal.png" srcset="img/imageCardModal@2x.png 2x" alt=""></picture></div>
+                                                    <div class="content-inner__wrapper">
+                                                        <p class="content-inner__text">Строительство современного дилерского центра в городе Алматы началось в начале 2023 года и продолжалось более двух лет.
+                                                            <br>Центр будет предоставлять широкий спектр услуг, включая продажу автомобилей, техническое  обслуживание, запасные части и многое другое.</p>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Название проекта:</div>
+                                                            <div class="content-inner__info-right">Дилерский центр</div>
+                                                        </div>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Страна:</div>
+                                                            <div class="content-inner__info-right">Казахстан</div>
+                                                        </div>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Город:</div>
+                                                            <div class="content-inner__info-right">Алматы</div>
+                                                        </div>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Срок проекта</div>
+                                                            <div class="content-inner__info-right">20 декабря 2024</div>
+                                                        </div>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Руководитель проекта</div>
+                                                            <div class="content-inner__info-right">Суровикин А.С</div>
+                                                        </div>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Назначенный директор</div>
+                                                            <div class="content-inner__info-right">Лужницкий Д.В</div>
+                                                        </div>
+                                                        <div class="content-inner__info">
+                                                            <div class="content-inner__info-left">Бюджет</div>
+                                                            <div class="content-inner__info-right">25 051 730 тен.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content-inner" id="content-2">
+                                                <div class="content-inner__wrap f-column">
+                                                    <div class="tasks__actions">
+                                                        <a href="" class="btn btn--accent btn--action">
+                                                            <span class="btn__medium btn__medium--red">Добавить задачу</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="task__list">
+                                                        <div class="task__item">
+                                                            <h2 class="task__title">Завершить строительство фундамента</h2>
+                                                            <p>Статус проекта: <span class="status status--success">Выполнено</span></p>
+                                                        </div>
+                                                        <div class="task__item">
+                                                            <h2 class="task__title">Начать возведение стен</h2>
+                                                            <p>Статус проекта: <span class="status status--success">Выполнено</span></p>
+                                                        </div>
+                                                        <div class="task__item">
+                                                            <h2 class="task__title">Провести коммуникации</h2>
+                                                            <p>Статус проекта: <span class="status status--in-progress">В процессе</span></p>
+                                                        </div>
+                                                        <div class="task__item">
+                                                            <h2 class="task__title">Начать возведение стен</h2>
+                                                            <p>Статус проекта: <span class="status status--in-progress">В процессе</span></p>
+                                                        </div>
+                                                        <div class="task__item">
+                                                            <h2 class="task__title">Начать возведение стен</h2>
+                                                            <p>Статус проекта: <span class="status status--opened">Не начато</span></p>
+                                                        </div>
+                                                        <div class="task__item">
+                                                            <h2 class="task__title">Завершить строительство фундамента</h2>
+                                                            <p>Статус проекта: <span class="status status--opened">Не начато</span></p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content-inner" id="content-3">
+                                                <div class="content-inner__wrap f-column">
+                                                    <div class="document__actions">
+                                                        <a href="" class="btn btn--accent btn--action">
+                                                            <span class="btn__medium btn__medium--red">Добавить задачу</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="documents">
+                                                        <h2 class="documents__title">Служебные записки</h2>
+                                                        <div class="document__list">
+                                                            <div class="document__item">
+                                                                <h2 class="document__title">Записка о закупке материала</h2>
+                                                                <p>Дата: <span >15.09.2024</span></p>
+                                                            </div>
+                                                            <div class="document__item">
+                                                                <h2 class="document__title">Записка о найме персонала</h2>
+                                                                <p>Дата: <span class="status status--success">17.09.2024</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="documents">
+                                                        <h2 class="documents__title">Договоры</h2>
+                                                        <div class="document__list">
+                                                            <div class="document__item">
+                                                                <h2 class="document__title">Договор с подрядчиком</h2>
+                                                                <p>Дата: <span >15.09.2024</span></p>
+                                                            </div>
+                                                            <div class="document__item">
+                                                                <h2 class="document__title">Договор аренды</h2>
+                                                                <p>Дата: <span class="status status--success">17.09.2024</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="content-inner" id="content-4">
+
+                                                <div class="content-inner__wrap f-column">
+                                                    <div class="document__actions">
+                                                        <a href="" class="btn btn--accent btn--action">
+                                                            <span class="btn__medium btn__medium--red">Добавить задачу</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="month__table">
+                                                        <table>
+                                                            <thead>
+                                                            <tr>
+                                                                <th></th>
+                                                                <th colspan="5">1 месяц</th>
+                                                                <th colspan="13">2 месяц</th>
+                                                                <th></th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>Числа</td>
+                                                                <td>1</td>
+                                                                <td>7</td>
+                                                                <td>9</td>
+                                                                <td>12</td>
+                                                                <td>14</td>
+                                                                <td>1</td>
+                                                                <td>7</td>
+                                                                <td>9</td>
+                                                                <td>12</td>
+                                                                <td>14</td>
+                                                                <td>16</td>
+                                                                <td>17</td>
+                                                                <td>21</td>
+                                                                <td>23</td>
+                                                                <td>27</td>
+                                                                <td>29</td>
+                                                                <td>30</td>
+                                                                <td>31</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Открытие ИП</td>
+                                                                <td class="col__orange"></td>
+                                                                <td class="col__orange"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="col__orange"></td>
+                                                                <td class="col__orange"></td>
+                                                                <td class="col__orange"></td>
+                                                                <td class="col__orange"></td>
+                                                                <td class="col__orange"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Закупка мебели</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="col__purple"></td>
+                                                                <td class="col__purple"></td>
+                                                                <td class="col__purple"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="col__purple"></td>
+                                                                <td class="col__purple"></td>
+                                                                <td class="col__purple"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Создание рекламы</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="col__blue"></td>
+                                                                <td class="col__blue"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="col__blue"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Товаронаполнение</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td class="col__red"></td>
+                                                                <td class="col__red"></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content-inner" id="content-5">
+                                                <div class="content-inner__wrap f-column">
+                                                    <ul class="content-inner__tabs">
+                                                        <li class="content-inner__tab tab-btn tab-btn--active" data-id="content-inner-1">IT</li>
+                                                        <li class="content-inner__tab tab-btn " data-id="content-inner-2">Маркетинг</li>
+                                                        <li class="content-inner__tab tab-btn " data-id="content-inner-3">HR</li>
+                                                        <li class="content-inner__tab tab-btn " data-id="content-inner-4">Кибербезопасность</li>
+                                                    </ul>
+                                                    <div class="content-inner__tabs-content">
+                                                        <div class="content-inner__tab-content content-inner--active" id="content-inner-1">
+                                                            <div class="coordination__list ">
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        1. Менеджер по IT - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--success">Согласовано</span></p>
+                                                                    <p>Тип согласования: <span class="status--success">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--success">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        2. Системный администратор - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--in-progress">Возращено на доработку</span></p>
+                                                                    <p>Тип согласования: <span class="status--in-progress">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--in-progress">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-inner__tab-content" id="content-inner-2">
+                                                            <div class="coordination__list ">
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        3. Менеджер по IT - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--success">Согласовано</span></p>
+                                                                    <p>Тип согласования: <span class="status--success">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--success">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        4. Системный администратор - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--in-progress">Возращено на доработку</span></p>
+                                                                    <p>Тип согласования: <span class="status--in-progress">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--in-progress">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-inner__tab-content" id="content-inner-3">
+                                                            <div class="coordination__list ">
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        5. Менеджер по IT - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--success">Согласовано</span></p>
+                                                                    <p>Тип согласования: <span class="status--success">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--success">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        6. Системный администратор - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--in-progress">Возращено на доработку</span></p>
+                                                                    <p>Тип согласования: <span class="status--in-progress">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--in-progress">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-inner__tab-content" id="content-inner-4">
+                                                            <div class="coordination__list ">
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        7. Менеджер по IT - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--success">Согласовано</span></p>
+                                                                    <p>Тип согласования: <span class="status--success">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--success">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="coordination__item">
+                                                                    <h2 class="coordination__title">
+                                                                        8. Системный администратор - Alexey Erastov
+                                                                    </h2>
+                                                                    <p>Состояние: <span class="status--in-progress">Возращено на доработку</span></p>
+                                                                    <p>Тип согласования: <span class="status--in-progress">Последовательно</span></p>
+                                                                    <p>Факт завершения: <span class="status--in-progress">17.09.2024, 15:30</span> </p>
+                                                                    <p>Комментарий: <span class="status--opened">Например, применение шаблонов  проектирования (как MVC или MVP).</span></p>
+                                                                    <a href="#" class="btn btn--accent">
+                                                                        <span class="btn__medium btn__medium--red">Изменить статус</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
+                            <div class="content" id="tab-2">
+                                <p>sldjflskjdf</p>
+                            </div>
+                            <div class="content" id="tab-3">
+                                <p>sdf</p>
+                            </div>
+                            <div class="content" id="tab-4">
+                                <p>sldjflskjdf</p>
+                            </div>
+                            <div class="content" id="tab-5">
+                                <p>sdf</p>
+                            </div>
                         </div>
-                        <div class="content-inner" id="content-2">sdfsfd rrt ffg</div>
-                        <div class="content-inner" id="content-3">sdfsfd dfgg55 555</div>
-                        <div class="content-inner" id="content-4">sdfsfd 555555</div>
-                        <div class="content-inner" id="content-5">sdfsfd 43434</div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-                <div class="content" id="tab-2">
-                  <p>sldjflskjdf</p>
-                </div>
-                <div class="content" id="tab-3">
-                  <p>sdf</p>
-                </div>
-                <div class="content" id="tab-4">
-                  <p>sldjflskjdf</p>
-                </div>
-                <div class="content" id="tab-5">
-                  <p>sdf</p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   </body>
   <script src="js/app.js?_v=20241027205056"></script>
